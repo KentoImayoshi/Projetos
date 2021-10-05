@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw" crossorigin="anonymous"></script>
+
+	<title>Formulário de Cadastro</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="panel panel-primary">
+			
+			<div class="panel-heading">
+				<font size="4"><b>Formulário de Cadastro</b></font>
+			</div>
+			<div class="panel-body">
+				<form action="recebecampos.php" method="post">
+					<div class="row">
+						<div class="col-sm-1">
+							<label>Nome:</label>
+						</div>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="txtNome" autofocus="" required>
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm-1">
+							<label>CPF:</label>
+						</div>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="txtCPF" id="txtCPF">
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm-1">
+							<label>E-mail:</label>
+						</div>
+						<div class="col-sm-6">
+							<input type="email" class="form-control" name="email">
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm-1">
+							<label>Telefone:</label>
+						</div>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" name="txtTel" id="txtTel">
+						</div>
+					</div>
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<input type="submit" value="Confirmar" class="btn btn-primary">
+							<input type="reset" value="Limpar" class="btn btn-primary">
+						</div>
+						
+					</div> 
+				</form>
+				
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+
+           $("#txtTel").mask("(99) 99999-9999");
+           $("#txtCPF").mask("999.999.999-99");
+
+    });
+</script>	
